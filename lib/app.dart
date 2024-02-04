@@ -1,3 +1,4 @@
+import 'package:bookly/cofing/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,6 +12,8 @@ class Bookly extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
+          initialRoute: '/',
+          onGenerateRoute: (settings) => AppRoutes.onGenerate(settings),
         );
       },
     );
