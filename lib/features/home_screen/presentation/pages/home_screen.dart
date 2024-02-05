@@ -1,3 +1,4 @@
+import 'package:bookly/core/utiles/app_images.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,7 +7,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Image.asset(AppImages.appLogo),
+        actions: [
+          IconButton(onPressed: () {
+
+          }, icon: Icon(Icons.search),),
+        ],
+      ),
     );
   }
 }

@@ -1,10 +1,8 @@
 import 'dart:async';
-import 'dart:html';
 
 import 'package:bookly/cofing/routes/app_routes.dart';
 import 'package:bookly/core/utiles/app_images.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen extends StatelessWidget {
