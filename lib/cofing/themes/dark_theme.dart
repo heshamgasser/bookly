@@ -5,17 +5,26 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/utiles/app_text_styles.dart';
 
 class DarkTheme {
-
   static ThemeData darkTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.kPrimaryColor,
-
     appBarTheme: AppBarTheme(
       color: Colors.transparent,
+      elevation: 0,
       iconTheme: IconThemeData(
         color: Colors.white,
         size: 30.r,
       ),
       titleSpacing: 20.r,
+    ),
+    iconButtonTheme: IconButtonThemeData(
+      style: IconButton.styleFrom(
+        iconSize: 30.r,
+        highlightColor: Colors.transparent,
+      ),
+    ),
+    iconTheme: IconThemeData(
+      size: 30.r,
+      color: Colors.white,
     ),
 
     textTheme: TextTheme(
@@ -27,6 +36,5 @@ class DarkTheme {
       labelLarge: AppTextStyles.darkLabelLarge,
       labelMedium: AppTextStyles.darkLabelMedium,
     ),
-
   );
 }

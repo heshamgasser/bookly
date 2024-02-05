@@ -1,4 +1,5 @@
 import 'package:bookly/core/utiles/app_images.dart';
+import 'package:bookly/features/home_screen/presentation/pages/books_slider_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,6 +16,7 @@ class HomeScreen extends StatelessWidget {
           }, icon: Icon(Icons.search),),
         ],
       ),
+      body: BooksSliderItems(),
     );
   }
 }
