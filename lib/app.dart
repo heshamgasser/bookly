@@ -1,4 +1,6 @@
 import 'package:bookly/cofing/routes/app_routes.dart';
+import 'package:bookly/cofing/themes/dark_theme.dart';
+import 'package:bookly/cofing/themes/light_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,6 +16,8 @@ class Bookly extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           initialRoute: '/',
           onGenerateRoute: (settings) => AppRoutes.onGenerate(settings),
+          theme: LightTheme.lightTheme,
+
         );
       },
     );
