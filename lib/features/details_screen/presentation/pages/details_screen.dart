@@ -4,8 +4,6 @@ import 'package:bookly/features/details_screen/presentation/widgets/similar_book
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/utiles/app_colors.dart';
-
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
 
@@ -27,9 +25,8 @@ class DetailsScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.w),
-        child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.stretch,
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.w),
+        child: ListView(
           children: [
             BookDetail(),
             SizedBox(height: 30.h),
@@ -37,7 +34,10 @@ class DetailsScreen extends StatelessWidget {
             SizedBox(height: 40.h),
             Align(
                 alignment: Alignment.centerLeft,
-                child: Text('You can also Like', style: Theme.of(context).textTheme.bodySmall,)),
+                child: Text(
+                  'You can also Like',
+                  style: Theme.of(context).textTheme.bodySmall,
+                )),
             SizedBox(height: 15.h),
             SimilarBooksItems()
           ],
