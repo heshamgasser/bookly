@@ -18,11 +18,11 @@ class AppTextStyles {
 
   //
   static TextStyle lightTitleMedium = GoogleFonts.montserrat(
-      fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white);
+      fontSize: 18.sp, fontWeight: FontWeight.w600, color: Colors.white);
 
 //
   static TextStyle darkTitleMedium = GoogleFonts.montserrat(
-      fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white);
+      fontSize: 18.sp, fontWeight: FontWeight.w600, color: Colors.white);
 
 //
 // static TextStyle lightTitleSmall = GoogleFonts. ;
@@ -70,11 +70,11 @@ class AppTextStyles {
 
 //
   static TextStyle lightLabelMedium = GoogleFonts.montserrat(
-      fontSize: 20.sp, color: Colors.white, fontWeight: FontWeight.w500);
+      fontSize: 20.sp, color: Colors.white, fontWeight: FontWeight.w600);
 
 //
   static TextStyle darkLabelMedium = GoogleFonts.montserrat(
-      fontSize: 20.sp, color: Colors.white, fontWeight: FontWeight.w500);
+      fontSize: 20.sp, color: Colors.white, fontWeight: FontWeight.w600);
 //
 // static TextStyle lightLabelSmall = GoogleFonts. ;
 // static TextStyle darkLabelSmall = GoogleFonts. ;

@@ -17,31 +17,31 @@ class BooksSliderItems extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, AppRoutes.detailsScreen);
               },
-              child: Stack(
-                children: [
-                  Container(
-                    width: 150.w,
-                    height: 224.h,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(14.r),
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
+                width: 125.w,
+                height: 224.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14.r),
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/Book 1 High.png'),
+                      fit: BoxFit.fill),
+                ),
+                child: Align(
+                  alignment: Alignment.bottomRight,
+                  child: CircleAvatar(
+                    radius: 20.r,
+                    backgroundColor: Colors.white38.withOpacity(0.4),
+                    child: Icon(
+                      Icons.play_arrow_rounded,
                     ),
-                    child: Image.asset('assets/images/Book 1 High.png'),
                   ),
-                  Positioned(
-                    right: 25.r,
-                    bottom: 10.r,
-                    child: CircleAvatar(
-                      radius: 20.r,
-                      backgroundColor: Colors.white38.withOpacity(0.4),
-                      child: Icon(Icons.play_arrow_rounded,),
-                    ),
-                  ),
-                ],
+                ),
               ),
             );
           },
           separatorBuilder: (context, index) {
-            return SizedBox(width: 5.w);
+            return SizedBox(width: 10.w);
           },
           itemCount: 10),
     );

@@ -17,11 +17,17 @@ class BestSellerItems extends StatelessWidget {
           },
           child: Row(
             children: [
-              SizedBox(
+              Container(
                 height: 110.h,
                 width: 70.w,
-                child: Image.asset('assets/images/Book 1 High.png'),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7.r),
+                  image: DecorationImage(image: AssetImage('assets/images/Book 1 High.png'), fit: BoxFit.fill),
+                ),
               ),
+
+
+
               SizedBox(width: 30.w),
               Expanded(
                 child: Column(

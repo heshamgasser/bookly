@@ -21,9 +21,10 @@ class SimilarBooksItems extends StatelessWidget {
                 width: 70.w,
                 height: 112.h,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14.r),
-                ),
-                child: Image.asset('assets/images/Book 1 High.png'),
+                    borderRadius: BorderRadius.circular(14.r),
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/Book 1 High.png'),
+                        fit: BoxFit.fill)),
               ),
             );
           },
