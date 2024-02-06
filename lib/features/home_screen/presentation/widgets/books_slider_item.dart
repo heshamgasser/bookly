@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../cofing/routes/app_routes.dart';
+
 class BooksSliderItems extends StatelessWidget {
   const BooksSliderItems({super.key});
 
@@ -8,11 +10,14 @@ class BooksSliderItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 224.h,
-      child: Expanded(
-        child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              return Stack(
+      child: ListView.separated(
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.detailsScreen);
+              },
+              child: Stack(
                 children: [
                   Container(
                     width: 150.w,
@@ -32,13 +37,13 @@ class BooksSliderItems extends StatelessWidget {
                     ),
                   ),
                 ],
-              );
-            },
-            separatorBuilder: (context, index) {
-              return SizedBox(width: 5.w);
-            },
-            itemCount: 10),
-      ),
+              ),
+            );
+          },
+          separatorBuilder: (context, index) {
+            return SizedBox(width: 5.w);
+          },
+          itemCount: 10),
     );
   }
 }

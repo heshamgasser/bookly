@@ -14,6 +14,11 @@ class LightTheme {
         size: 30.r,
       ),
       titleSpacing: 20.r,
+      actionsIconTheme: IconThemeData(
+        color: Colors.white,
+        size: 30.r,
+      ),
+
     ),
     iconButtonTheme: IconButtonThemeData(
       style: IconButton.styleFrom(
