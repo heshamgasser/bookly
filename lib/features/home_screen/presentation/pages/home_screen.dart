@@ -2,6 +2,7 @@ import 'package:bookly/core/utiles/app_images.dart';
 import 'package:bookly/core/utiles/app_string.dart';
 import 'package:bookly/features/home_screen/presentation/widgets/best_seller_items.dart';
 import 'package:bookly/features/home_screen/presentation/widgets/books_slider_item.dart';
+import 'package:bookly/features/home_screen/presentation/widgets/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,10 +13,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Image.asset(AppImages.appLogo),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showSearch(context: context, delegate: SearchScreen());
+            },
             icon: Icon(Icons.search),
           ),
         ],
@@ -33,7 +37,6 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 19.h),
             BestSellerItems(),
-
           ],
         ),
       ),

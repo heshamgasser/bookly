@@ -5,10 +5,12 @@ import '../../core/utiles/app_components.dart';
 import '../../features/details_screen/presentation/pages/details_screen.dart';
 import '../../features/home_screen/presentation/pages/home_screen.dart';
 
+
 class AppRoutes {
   static const String splashScreen = '/';
   static const String homeScreen = 'Homes Screen';
   static const String detailsScreen = 'Details Screen';
+  static const String searchScreen = 'Search Screen';
 
   static Route onGenerate(RouteSettings routeSettings) {
     switch (routeSettings.name) {
@@ -26,9 +28,11 @@ class AppRoutes {
           builder: (context) => const DetailsScreen(),
         );
 
+
+
       default:
         return MaterialPageRoute(
-          builder: (context) => AppComponents.unDefinedRoute(),
+          builder: (context) => AppComponents.unDefinedRoute(context),
         );
     }
   }

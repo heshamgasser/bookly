@@ -1,3 +1,4 @@
+import 'package:bookly/features/details_screen/presentation/widgets/book_action.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,38 +12,29 @@ class PriceContainer extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-          alignment: Alignment.center,
-          height: 48.h,
-          width: 150.w,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20.r),
-                bottomLeft: Radius.circular(20.r),
-              ),
-              color: Colors.white),
-          child: Text(
-            '19.99 SAR',
-            style: Theme.of(context)
-                .textTheme
-                .bodySmall!
-                .copyWith(color: Colors.black),
+        BookAction(
+          backgroundColor: Colors.white,
+          boarderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15.r),
+            bottomLeft: Radius.circular(15.r),
           ),
+          text: '19.99 €',
+          textStyle: Theme.of(context)
+              .textTheme
+              .bodySmall!
+              .copyWith(color: Colors.black, fontWeight: FontWeight.bold),
         ),
-        Container(
-          alignment: Alignment.center,
-          height: 48.h,
-          width: 150.w,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topRight: Radius.circular(20.r),
-                bottomRight: Radius.circular(20.r),
-              ),
-              color: AppColors.orangeColor),
-          child: Text(
-            'Free Preview',
-            style: Theme.of(context).textTheme.bodySmall,
+        BookAction(
+          backgroundColor: AppColors.orangeColor,
+          boarderRadius: BorderRadius.only(
+            topRight: Radius.circular(15.r),
+            bottomRight: Radius.circular(15.r),
           ),
+          text: 'Free Preview',
+          textStyle: Theme.of(context)
+              .textTheme
+              .bodySmall!
+              .copyWith(fontWeight: FontWeight.bold),
         ),
       ],
     );
