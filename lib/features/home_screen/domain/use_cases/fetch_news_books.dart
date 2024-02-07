@@ -8,7 +8,7 @@ class FetchNewsBooksUseCases {
 
   FetchNewsBooksUseCases(this.homeRepo);
 
-  Future<Either<Failure, List<BookEntity>>> fetchNewsBooks (){
+  Future<Either<Failure, List<BookEntity>>> call (){
 
     return homeRepo.fetchNewsBooks();
   }
